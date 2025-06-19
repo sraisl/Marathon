@@ -60,6 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: # Yep, you can open this file in your IDE: Just drag and drop it into IntelliJ IDEA or Visual Studio Code
           name: grype-scan-results.sarif
+          path: "."
           
 # ======================================================
 
