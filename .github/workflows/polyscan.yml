@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: polyscan
-        uses: sraisl/polyscan-action@fix/project-hardening
+        uses: sraisl/polyscan-action@v5
         with:
           target: "."
           engines: "semgrep,spotbugs,trivy,detekt,gitleaks"
