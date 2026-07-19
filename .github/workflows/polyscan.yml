@@ -1,4 +1,5 @@
 name: polyscan
+
 on:
   workflow_dispatch:
 
@@ -8,13 +9,13 @@ jobs:
     steps:
 
       - name: checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v5
 
       - name: polyscan
-        uses: sraisl/polyscan-action@v3
+        uses: sraisl/polyscan-action@feat/gitleaks
         with:
           target: "."
-          engines: "semgrep,bandit,eslint,spotbugs"
+          engines: "semgrep,bandit,eslint,spotbugs,trivy,detekt,gitleaks"
           max-critical: "0"
           max-high: "0"
           max-medium: "50"
@@ -22,5 +23,3 @@ jobs:
           sarif: "true"
           sbom: "true"
           upload-artifacts: "true"
-      
-      
