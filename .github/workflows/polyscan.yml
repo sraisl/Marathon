@@ -15,7 +15,7 @@ jobs:
         uses: sraisl/polyscan-action@v5
         with:
           target: "."
-          engines: "semgrep,spotbugs,trivy,detekt,gitleaks"
+          engines: "semgrep,opengrep,spotbugs,trivy,detekt,gitleaks"
           max-critical: "0"
           max-high: "0"
           max-medium: "50"
