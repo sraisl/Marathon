@@ -9,13 +9,13 @@ jobs:
     steps:
 
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: polyscan
-        uses: sraisl/polyscan-action@v12
+        uses: sraisl/polyscan-action@v13
         with:
           target: "."
-          engines: "semgrep,opengrep,spotbugs,trivy,detekt,gitleaks"
+          engines: "semgrep,opengrep,spotbugs,trivy,detekt,gitleaks,hadolint"
           max-critical: "0"
           max-high: "0"
           max-medium: "50"
